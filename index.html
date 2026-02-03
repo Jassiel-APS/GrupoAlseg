@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRUPO ALSEG - Seguridad Corporativa Integral</title>
+    <meta name="description" content="Soluciones integrales de seguridad corporativa e industrial. Implementación, monitoreo 24/7 y asesoría de riesgos para empresas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- SVG sprite (iconos reutilizables) -->
+    <div aria-hidden="true" style="position:absolute; width:0; height:0; overflow:hidden;">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-phone" viewBox="0 0 24 24">
+                <path fill="#111C59" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 01.9-.26 11.3 11.3 0 003.5.56 1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 015 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.18 2.4.56 3.5a1 1 0 01-.26.9L6.6 10.8z"/>
+            </symbol>
+            <symbol id="icon-building" viewBox="0 0 24 24">
+                <path fill="#347EBF" d="M3 21h18v-2H3v2zM6 7h2v2H6V7zm0 4h2v2H6v-2zM10 7h2v2h-2V7zm0 4h2v2h-2v-2zM14 7h2v2h-2V7zm0 4h2v2h-2v-2zM4 3h12v14H4V3z"/>
+            </symbol>
+            <symbol id="icon-chart" viewBox="0 0 24 24">
+                <path fill="#347EBF" d="M3 3v18h18v-2H5V3H3zm6 6h2v9H9V9zm4-4h2v13h-2V5zm4 8h2v5h-2v-5z"/>
+            </symbol>
+            <symbol id="icon-shield" viewBox="0 0 24 24">
+                <path fill="#141873" d="M12 2l7 3v6c0 5-4 9-7 11-3-2-7-6-7-11V5l7-3z"/>
+            </symbol>
+            <symbol id="icon-wrench" viewBox="0 0 24 24">
+                <path fill="#111C59" d="M22.7 19.3l-2.4-2.4a7.9 7.9 0 01-1.9 1.2l-3.2-3.2 1.9-1.9-4.2-4.2-1.9 1.9L6 10.1a7.9 7.9 0 01-1.2-1.9L2.4 7.1 1 8.5l2.4 2.4a10 10 0 000 7.1l6.1 6.1 2.1-2.1 6.1-6.1a10 10 0 007.1 0L22.7 19.3z"/>
+            </symbol>
+            <symbol id="icon-eye" viewBox="0 0 24 24">
+                <path fill="#111C59" d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11.5A4.5 4.5 0 1116.5 12 4.5 4.5 0 0112 16.5z"/>
+            </symbol>
+            <symbol id="icon-target" viewBox="0 0 24 24">
+                <path fill="#347EBF" d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm0 18a8 8 0 118-8 8 8 0 01-8 8zM12 8a4 4 0 104 4 4 4 0 00-4-4z"/>
+            </symbol>
+            <symbol id="icon-warning" viewBox="0 0 24 24">
+                <path fill="#F5A623" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+            </symbol>
+            <symbol id="icon-search" viewBox="0 0 24 24">
+                <path fill="#111C59" d="M21 20l-4.35-4.35A7 7 0 1018 18l4 4L21 20zM5 11a6 6 0 1112 0A6 6 0 015 11z"/>
+            </symbol>
+            <symbol id="icon-clipboard" viewBox="0 0 24 24">
+                <path fill="#347EBF" d="M19 3h-4.18A2 2 0 0013 2H11a2 2 0 00-1.82 1H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM12 7a2 2 0 110-4 2 2 0 010 4z"/>
+            </symbol>
+            <symbol id="icon-light" viewBox="0 0 24 24">
+                <path fill="#F2C94C" d="M9 21h6v-1H9v1zM12 2a7 7 0 00-4 12v3h8v-3a7 7 0 00-4-12z"/>
+            </symbol>
+            <symbol id="icon-rocket" viewBox="0 0 24 24">
+                <path fill="#347EBF" d="M12 2s4 1 6 3 3 6 3 6-1 1-4 1-6 3-6 3-2-3-3-6-1-4-1-4 3-1 5-3zM6 18v4l2-1 2 1v-4l-2-1-2 1z"/>
+            </symbol>
+            <symbol id="icon-check" viewBox="0 0 24 24">
+                <path fill="#0f7a3f" d="M20.3 5.3l-11 11-5.6-5.6L6 8.4l3.3 3.3 9.1-9.1 2.2 2.2z"/>
+            </symbol>
+            <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+                <path fill="#25D366" d="M20.52 3.48A11.86 11.86 0 0012 .5 11.9 11.9 0 003.5 9.02c0 2.1.55 4.13 1.6 5.9L2 22l7.3-3.1a11.88 11.88 0 005.7 1.5h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.2-1.25-6.2-3.45-8.36zM12 20.2c-1.8 0-3.5-.5-5-1.4l-.35-.2-4.2 1.8 1.8-4.1-.22-.35A8.7 8.7 0 013.3 9c0-4.8 4-8.7 8.7-8.7 2.3 0 4.4.9 6 2.5a8.66 8.66 0 012.5 6c0 4.8-3.9 8.7-8.7 8.7z"/>
+            </symbol>
+            <symbol id="icon-linkedin" viewBox="0 0 24 24">
+                <path fill="#0A66C2" d="M4.98 3.5A2.5 2.5 0 112.5 6a2.5 2.5 0 012.48-2.5zM3 8.98h3.98V21H3V8.98zM9.5 8.98h3.82v1.63h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.64 4.74 6.07V21h-3.98v-5.38c0-1.28-.02-2.92-1.78-2.92-1.78 0-2.05 1.39-2.05 2.83V21H9.5V8.98z"/>
+            </symbol>
+            <symbol id="icon-facebook" viewBox="0 0 24 24">
+                <path fill="#1877F2" d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 4.99 3.66 9.13 8.44 9.95v-7.05H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.77-1.61 1.56v1.88h2.74l-.44 2.9h-2.3v7.05C18.34 21.2 22 17.06 22 12.07z"/>
+            </symbol>
+        </svg>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="Logo/GrupoAlsegLogo.png" alt="Grupo Alseg" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%2718%27 fill=%27%23141873%27/%3E%3Cpath d=%27M20 8l8 6v12l-8 6-8-6V14l8-6z%27 fill=%27white%27/%3E%3C/svg%3E'">
+                <span class="logo-text"></span>
+            </div>
+            <div class="nav-menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#soluciones">Soluciones</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="nav-contacts">
+                <a class="nav-phone" href="tel:+15551234567" aria-label="Llamar"> 
+                    <i class="fa-solid fa-phone nav-icon" aria-hidden="true"></i>
+                    <span class="nav-contact-text">+1 555 123-4567</span>
+                </a>
+                <a class="nav-whatsapp" href="https://wa.me/15551234567" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp nav-icon" aria-hidden="true"></i>
+                </a>
+                <div class="nav-socials">
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin nav-icon" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f nav-icon" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">
+                    Seguridad Corporativa
+                    <span class="highlight">Integral</span>
+                </h1>
+                <p class="hero-subtitle fade-in">
+                    Más que cámaras y alarmas. Implementamos ecosistemas completos de seguridad 
+                    con monitoreo 24/7 y asesoría estratégica para proteger lo que más importa.
+                </p>
+                <div class="hero-cta fade-in">
+                    <button class="btn-primary">Solicitar Asesoría</button>
+                    <button class="btn-secondary">Ver Demo</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-graphics">
+                    <div class="security-circle">
+                        <div class="inner-circle"></div>
+                        <div class="security-icons">
+                            <div class="icon-item" data-delay="0">📱</div>
+                            <div class="icon-item" data-delay="0.2">🏢</div>
+                            <div class="icon-item" data-delay="0.4">📊</div>
+                            <div class="icon-item" data-delay="0.6">🛡️</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos -->
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Quiénes Somos</h2>
+                <p class="section-subtitle">
+                    Grupo especializado en seguridad corporativa e industrial con enfoque en soluciones integrales
+                </p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Experiencia que Genera Confianza</h3>
+                    <p>
+                        No somos una empresa más de seguridad. Somos especialistas en crear 
+                        ecosistemas completos que evolucionan con tu negocio.
+                    </p>
+                    <p>
+                        Nuestro enfoque va más allá de instalar equipos: diseñamos estrategias 
+                        de protección adaptadas a cada industria y empresa.
+                    </p>
+                    <div class="stats">
+                            <div class="stat-item">
+                                <h4 class="counter" data-target="500">0</h4>
+                                <p>Empresas Protegidas</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4 class="counter" data-target="24">0</h4>
+                                <p>Horas / 7 días</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4 class="counter" data-target="15">0</h4>
+                                <p>Años de Experiencia</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-placeholder">
+                        <div class="placeholder-content">
+                            <div class="building-icon">🏢</div>
+                            <div class="connection-lines"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- El Problema -->
+    <section class="problem">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">El Problema que Resolvemos</h2>
+                <p class="section-subtitle">
+                    La mayoría de empresas tienen sistemas fragmentados que no ofrecen protección real
+                </p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="card-icon">⚠️</div>
+                    <h3>Falta de Integración</h3>
+                    <p>Sistemas aislados que no se comunican entre sí, creando puntos ciegos en la seguridad.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Monitoreo Insuficiente</h3>
+                    <p>Equipos sin supervisión real que solo graban pero no previenen ni alertan.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="card-icon">📊</div>
+                    <h3>Sin Asesoría Estratégica</h3>
+                    <p>Inversiones en seguridad sin análisis de riesgos reales ni planificación a futuro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ciclo de Seguridad -->
+    <section id="soluciones" class="security-cycle">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Ciclo de Seguridad Integral</h2>
+                <p class="section-subtitle">
+                    Tres pilares conectados que trabajan como un ecosistema completo
+                </p>
+            </div>
+            
+            <div class="cycle-diagram">
+                <!-- Centro del ciclo -->
+                <div class="cycle-center">
+                    <div class="center-circle">
+                        <div class="center-icon">🛡️</div>
+                        <h3>Seguridad<br><span>360°</span></h3>
+                        <p>Ecosistema Integral</p>
+                    </div>
+                </div>
+                
+                <!-- Elemento 1: Implementación (Bottom) - reposicionado -->
+                <div class="cycle-element element-bottom" data-step="1">
+                    <div class="element-card">
+                        <div class="element-icon">🔧</div>
+                        <h4>Implementación</h4>
+                        <p>Sistemas integrados de seguridad</p>
+                        <div class="element-details">
+                            <span>Análisis completo</span>
+                            <span>Diseño personalizado</span>
+                            <span>Instalación profesional</span>
+                            <span>Integración total</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Elemento 2: Monitoreo (Right) -->
+                <div class="cycle-element element-right" data-step="2">
+                    <div class="element-card">
+                        <div class="element-icon">👁️</div>
+                        <h4>Monitoreo 24/7</h4>
+                        <p>Supervisión constante y respuesta</p>
+                        <div class="element-details">
+                            <span>Centro de control</span>
+                            <span>Alertas inteligentes</span>
+                            <span>Respuesta inmediata</span>
+                            <span>Reportes detallados</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Elemento 3: Asesoría (Bottom Left) -->
+                <div class="cycle-element element-left" data-step="3">
+                    <div class="element-card">
+                        <div class="element-icon">🎯</div>
+                        <h4>Asesoría de Riesgos</h4>
+                        <p>Diagnóstico y mejora continua</p>
+                        <div class="element-details">
+                            <span>Evaluación de riesgos</span>
+                            <span>Análisis predictivo</span>
+                            <span>Optimización continua</span>
+                            <span>Consultoría estratégica</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SVG para las conexiones -->
+                <svg class="cycle-connections" viewBox="0 0 450 450">
+                    <!-- Círculo base punteado -->
+                    <circle cx="225" cy="225" r="200" fill="none" stroke="#347EBF" stroke-width="2" stroke-dasharray="8,4" opacity="0.3"/>
+                    
+                    <!-- Líneas de conexión -->
+                    <path d="M 225 25 A 200 200 0 0 1 425 225" fill="none" stroke="#347EBF" stroke-width="2" opacity="0.6" class="connection-line"/>
+                    <path d="M 425 225 A 200 200 0 0 1 25 225" fill="none" stroke="#347EBF" stroke-width="2" opacity="0.6" class="connection-line"/>
+                    <path d="M 25 225 A 200 200 0 0 1 225 25" fill="none" stroke="#347EBF" stroke-width="2" opacity="0.6" class="connection-line"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concepto Digital -->
+    <section class="digital-concept">
+        <div class="container">
+            <div class="concept-content">
+                <div class="concept-text">
+                    <h2>De la Tienda Física a la Asesoría Digital</h2>
+                    <p>
+                        Así como en una tienda física te asesoramos personalmente, 
+                        nuestra plataforma digital replica esta experiencia mediante 
+                        módulos informativos inteligentes.
+                    </p>
+                    <div class="concept-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">📋</span>
+                            <div>
+                                <h4>Diagnóstico Personalizado</h4>
+                                <p>Evaluamos tus necesidades específicas</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">💡</span>
+                            <div>
+                                <h4>Recomendaciones Inteligentes</h4>
+                                <p>Soluciones adaptadas a tu industria</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🚀</span>
+                            <div>
+                                <h4>Implementación Guiada</h4>
+                                <p>Te acompañamos en cada paso</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="concept-visual">
+                    <div class="modules-container">
+                        <div class="module-card active">
+                            <div class="module-header">
+                                <span class="module-dot"></span>
+                                <h4>Análisis de Riesgos</h4>
+                            </div>
+                            <p>Identificación de vulnerabilidades específicas de tu empresa</p>
+                        </div>
+                        <div class="module-card">
+                            <div class="module-header">
+                                <span class="module-dot"></span>
+                                <h4>Propuesta Personalizada</h4>
+                            </div>
+                            <p>Solución diseñada para tus necesidades y presupuesto</p>
+                        </div>
+                        <div class="module-card">
+                            <div class="module-header">
+                                <span class="module-dot"></span>
+                                <h4>Plan de Implementación</h4>
+                            </div>
+                            <p>Cronograma claro con etapas y resultados medibles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para Quién Es -->
+    <section class="target-audience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Para Quién Trabajamos</h2>
+                <p class="section-subtitle">
+                    Especializados en proteger organizaciones que valoran la excelencia
+                </p>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="card-visual">
+                        <div class="visual-icon">🏢</div>
+                    </div>
+                    <h3>Empresas Corporativas</h3>
+                    <p>Oficinas, centros de negocios y sedes corporativas que requieren seguridad integral y discreta.</p>
+                    <div class="card-examples">
+                        <span>Bancos</span>
+                        <span>Consultoras</span>
+                        <span>Tecnológicas</span>
+                    </div>
+                </div>
+                <div class="audience-card">
+                    <div class="card-visual">
+                        <div class="visual-icon">🏭</div>
+                    </div>
+                    <h3>Sector Industrial</h3>
+                    <p>Plantas industriales, almacenes y centros de distribución con necesidades específicas de seguridad.</p>
+                    <div class="card-examples">
+                        <span>Manufactura</span>
+                        <span>Logística</span>
+                        <span>Energía</span>
+                    </div>
+                </div>
+                <div class="audience-card">
+                    <div class="card-visual">
+                        <div class="visual-icon">🛍️</div>
+                    </div>
+                    <h3>Comercio y Retail</h3>
+                    <p>Centros comerciales, cadenas de retail y espacios comerciales de alto tráfico.</p>
+                    <div class="card-examples">
+                        <span>Retail</span>
+                        <span>Centros Comerciales</span>
+                        <span>Restaurantes</span>
+                    </div>
+                </div>
+                <div class="audience-card">
+                    <div class="card-visual">
+                        <div class="visual-icon">🎓</div>
+                    </div>
+                    <h3>Instituciones</h3>
+                    <p>Universidades, hospitales y organismos gubernamentales que protegen comunidades.</p>
+                    <div class="card-examples">
+                        <span>Educación</span>
+                        <span>Salud</span>
+                        <span>Gobierno</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="contacto" class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>¿Listo para Transformar tu Seguridad?</h2>
+                    <p>
+                        No vendemos productos. Diseñamos soluciones. 
+                        Agenda una asesoría sin compromiso y descubre 
+                        cómo podemos proteger tu negocio.
+                    </p>
+                    <div class="cta-benefits">
+                        <div class="benefit-item">
+                            <span class="check">✓</span>
+                            <span>Diagnóstico gratuito de riesgos</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="check">✓</span>
+                            <span>Propuesta personalizada</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="check">✓</span>
+                            <span>Sin compromiso de compra</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-form">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email corporativo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Teléfono" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Tipo de empresa</option>
+                                <option value="corporativa">Corporativa</option>
+                                <option value="industrial">Industrial</option>
+                                <option value="comercial">Comercial</option>
+                                <option value="institucional">Institucional</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary full-width">
+                            Agendar Asesoría Gratuita
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="Logo/logo.svg" alt="Grupo Alseg" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%2718%27 fill=%27%23141873%27/%3E%3Cpath d=%27M20 8l8 6v12l-8 6-8-6V14l8-6z%27 fill=%27white%27/%3E%3C/svg%3E'">
+                        <span>GRUPO ALSEG</span>
+                    </div>
+                    <p>Seguridad corporativa integral para empresas que buscan excelencia.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>Servicios</h4>
+                        <a href="#">Implementación</a>
+                        <a href="#">Monitoreo 24/7</a>
+                        <a href="#">Asesoría de Riesgos</a>
+                        <a href="#">Consultoría</a>
+                    </div>
+                    <div class="link-column">
+                        <h4>Sectores</h4>
+                        <a href="#">Corporativo</a>
+                        <a href="#">Industrial</a>
+                        <a href="#">Comercial</a>
+                        <a href="#">Institucional</a>
+                    </div>
+                    <div class="link-column">
+                        <h4>Contacto</h4>
+                        <a href="#">contacto@grupoalseg.com</a>
+                        <a href="#">+1 (555) 123-4567</a>
+                        <a href="#">Dirección</a>
+                        <a href="#">Asesoría</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Grupo Alseg. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- WhatsApp flotante -->
+    <a href="https://wa.me/15551234567" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp whatsapp-icon" aria-hidden="true"></i>
+    </a>
+</body>
+</html>
