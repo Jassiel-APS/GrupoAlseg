@@ -313,6 +313,124 @@ document.addEventListener('DOMContentLoaded', function() {
             handleFormSubmission(this);
         });
     }
+
+    // ============================================================================
+    // CUSTOM SELECT - reemplazo estilizable
+    // ============================================================================
+    function initCustomSelects() {
+        document.querySelectorAll('.select-wrap select').forEach(orig => {
+            // crear estructura
+            const wrap = orig.parentElement;
+            orig.style.display = 'none';
+
+            const cs = document.createElement('div');
+            cs.className = 'custom-select';
+            cs.tabIndex = 0;
+
+            const selected = document.createElement('div');
+            selected.className = 'cs-selected';
+            selected.setAttribute('role', 'button');
+            selected.setAttribute('aria-haspopup', 'listbox');
+
+            const txt = document.createElement('span');
+            txt.className = 'cs-text';
+            txt.textContent = orig.options[orig.selectedIndex].textContent || orig.options[0].textContent;
+
+            const arrow = document.createElement('span');
+            arrow.className = 'arrow';
+            // single SVG arrow; CSS rotates it when `.custom-select` has the `.open` class
+            arrow.innerHTML = `
+                <svg class="svg-arrow" viewBox="0 0 24 24" width="14" height="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+            `;
+
+            selected.appendChild(txt);
+            selected.appendChild(arrow);
+
+            const list = document.createElement('ul');
+            list.className = 'cs-options';
+            list.setAttribute('role', 'listbox');
+
+            Array.from(orig.options).forEach((opt, i) => {
+                const li = document.createElement('li');
+                li.setAttribute('role', 'option');
+                li.dataset.value = opt.value;
+                li.textContent = opt.textContent;
+                if (i === orig.selectedIndex) li.classList.add('active');
+                li.addEventListener('click', function() {
+                    // marcar seleccionado
+                    list.querySelectorAll('li').forEach(n => n.classList.remove('active'));
+                    this.classList.add('active');
+                    txt.textContent = this.textContent;
+                    orig.value = this.dataset.value;
+                    orig.dispatchEvent(new Event('change'));
+                    cs.classList.remove('open');
+                });
+                list.appendChild(li);
+            });
+
+            cs.appendChild(selected);
+            cs.appendChild(list);
+            wrap.appendChild(cs);
+
+            // Toggle open
+            selected.addEventListener('click', () => {
+                const isOpen = cs.classList.toggle('open');
+                cs.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            // Close on outside click
+            document.addEventListener('click', (e) => {
+                if (!cs.contains(e.target)) {
+                    cs.classList.remove('open');
+                    cs.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Keyboard support
+            cs.addEventListener('keydown', (e) => {
+                const open = cs.classList.contains('open');
+                const items = Array.from(list.querySelectorAll('li'));
+                let idx = items.findIndex(i => i.classList.contains('active'));
+
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    if (!open) cs.classList.add('open');
+                    idx = Math.min(items.length -1, idx + 1);
+                    items.forEach(n => n.classList.remove('active'));
+                    items[idx].classList.add('active');
+                    items[idx].scrollIntoView({block: 'nearest'});
+                }
+                if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    if (!open) cs.classList.add('open');
+                    idx = Math.max(0, idx - 1);
+                    items.forEach(n => n.classList.remove('active'));
+                    items[idx].classList.add('active');
+                    items[idx].scrollIntoView({block: 'nearest'});
+                }
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    if (open) {
+                        const active = list.querySelector('li.active');
+                        if (active) {
+                            txt.textContent = active.textContent;
+                            orig.value = active.dataset.value;
+                            orig.dispatchEvent(new Event('change'));
+                        }
+                        cs.classList.remove('open');
+                    } else {
+                        cs.classList.add('open');
+                    }
+                }
+                if (e.key === 'Escape') {
+                    cs.classList.remove('open');
+                }
+            });
+        });
+    }
+
+    // Inicializar custom selects
+    initCustomSelects();
     
     function validateField(field) {
         const value = field.value.trim();
