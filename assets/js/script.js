@@ -610,16 +610,34 @@ document.addEventListener('DOMContentLoaded', function() {
         function step(now) {
             const progress = Math.min((now - start) / duration, 1);
             const value = Math.floor(progress * target);
-            el.textContent = value < 1 ? '0' : value;
+            const display = (el.dataset.plus ? '+' : '') + (value < 1 ? '0' : value);
+            el.textContent = display;
             if (progress < 1) {
                 requestAnimationFrame(step);
             } else {
-                el.textContent = target;
+                el.textContent = (el.dataset.plus ? '+' : '') + target;
             }
         }
 
         requestAnimationFrame(step);
     }
+
+    // ============================================================================
+    // SYNC NAV HEIGHT
+    // ============================================================================
+    // Asegura que la variable CSS --nav-height refleje la altura real del nav
+    function syncNavHeight() {
+        const nav = document.querySelector('.navbar');
+        if (!nav) return;
+        const rect = nav.getBoundingClientRect();
+        const h = Math.ceil(rect.height);
+        document.documentElement.style.setProperty('--nav-height', h + 'px');
+    }
+
+    // Ejecutar inicialmente y al cambiar tamaño
+    syncNavHeight();
+    window.addEventListener('resize', throttle(syncNavHeight, 120));
+    window.addEventListener('load', syncNavHeight);
     
     // Log para debug (solo en desarrollo)
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
