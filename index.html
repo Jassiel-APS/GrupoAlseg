@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRUPO ALSEG - Seguridad Corporativa Integral</title>
-    <meta name="description" content="Soluciones integrales de seguridad corporativa e industrial. Implementación, monitoreo 24/7 y asesoría de riesgos para empresas.">
+    <meta name="description"
+        content="Soluciones integrales de seguridad corporativa e industrial. Implementación, monitoreo 24/7 y asesoría de riesgos para empresas.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,146 +14,196 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
     <!-- SVG sprite (iconos reutilizables) -->
     <div aria-hidden="true" style="position:absolute; width:0; height:0; overflow:hidden;">
         <svg xmlns="http://www.w3.org/2000/svg">
             <symbol id="icon-phone" viewBox="0 0 24 24">
-                <path fill="#111C59" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 01.9-.26 11.3 11.3 0 003.5.56 1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 015 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.18 2.4.56 3.5a1 1 0 01-.26.9L6.6 10.8z"/>
+                <path fill="#111C59"
+                    d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 01.9-.26 11.3 11.3 0 003.5.56 1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 015 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.18 2.4.56 3.5a1 1 0 01-.26.9L6.6 10.8z" />
             </symbol>
             <symbol id="icon-building" viewBox="0 0 24 24">
-                <path fill="#FFFFFF" d="M3 21h18v-2H3v2zM6 7h2v2H6V7zm0 4h2v2H6v-2zM10 7h2v2h-2V7zm0 4h2v2h-2v-2zM14 7h2v2h-2V7zm0 4h2v2h-2v-2zM4 3h12v14H4V3z"/>
+                <path fill="#FFFFFF"
+                    d="M3 21h18v-2H3v2zM6 7h2v2H6V7zm0 4h2v2H6v-2zM10 7h2v2h-2V7zm0 4h2v2h-2v-2zM14 7h2v2h-2V7zm0 4h2v2h-2v-2zM4 3h12v14H4V3z" />
             </symbol>
             <symbol id="icon-chart" viewBox="0 0 24 24">
-                <path fill="#FFFFFF" d="M3 3v18h18v-2H5V3H3zm6 6h2v9H9V9zm4-4h2v13h-2V5zm4 8h2v5h-2v-5z"/>
+                <path fill="#FFFFFF" d="M3 3v18h18v-2H5V3H3zm6 6h2v9H9V9zm4-4h2v13h-2V5zm4 8h2v5h-2v-5z" />
             </symbol>
             <!-- Iconos para sección Soluciones -->
             <symbol id="icon-link-broken" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zM7 7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7z"/>
-                <line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2"/>
+                <path fill="currentColor"
+                    d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zM7 7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7z" />
+                <line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2" />
             </symbol>
             <symbol id="icon-visibility-off" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46A11.8 11.8 0 001 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z"/>
+                <path fill="currentColor"
+                    d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46A11.8 11.8 0 001 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z" />
             </symbol>
             <symbol id="icon-strategy" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                <path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5 0 1.52-.97 2.81-2.33 3.28l-.17.05V15h-2v-2.14l-.17-.05C9.47 12.31 8.5 11.02 8.5 9.5 8.5 7.57 10.07 6 12 6zm0-4C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                <path fill="currentColor"
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                <path fill="currentColor"
+                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5 0 1.52-.97 2.81-2.33 3.28l-.17.05V15h-2v-2.14l-.17-.05C9.47 12.31 8.5 11.02 8.5 9.5 8.5 7.57 10.07 6 12 6zm0-4C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
             </symbol>
             <symbol id="icon-shield" viewBox="0 0 24 24">
-                <path fill="#141873" d="M12 2l7 3v6c0 5-4 9-7 11-3-2-7-6-7-11V5l7-3z"/>
+                <path fill="#141873" d="M12 2l7 3v6c0 5-4 9-7 11-3-2-7-6-7-11V5l7-3z" />
             </symbol>
             <symbol id="icon-wrench" viewBox="0 0 24 24">
-                <path fill="#111C59" d="M22.7 19.3l-2.4-2.4a7.9 7.9 0 01-1.9 1.2l-3.2-3.2 1.9-1.9-4.2-4.2-1.9 1.9L6 10.1a7.9 7.9 0 01-1.2-1.9L2.4 7.1 1 8.5l2.4 2.4a10 10 0 000 7.1l6.1 6.1 2.1-2.1 6.1-6.1a10 10 0 007.1 0L22.7 19.3z"/>
+                <path fill="#111C59"
+                    d="M22.7 19.3l-2.4-2.4a7.9 7.9 0 01-1.9 1.2l-3.2-3.2 1.9-1.9-4.2-4.2-1.9 1.9L6 10.1a7.9 7.9 0 01-1.2-1.9L2.4 7.1 1 8.5l2.4 2.4a10 10 0 000 7.1l6.1 6.1 2.1-2.1 6.1-6.1a10 10 0 007.1 0L22.7 19.3z" />
             </symbol>
             <symbol id="icon-eye" viewBox="0 0 24 24">
-                <path fill="#FFFFFF" d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11.5A4.5 4.5 0 1116.5 12 4.5 4.5 0 0112 16.5z"/>
+                <path fill="#FFFFFF"
+                    d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11.5A4.5 4.5 0 1116.5 12 4.5 4.5 0 0112 16.5z" />
             </symbol>
             <symbol id="icon-target" viewBox="0 0 24 24">
-                <path fill="#111C59" d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm0 18a8 8 0 118-8 8 8 0 01-8 8zM12 8a4 4 0 104 4 4 4 0 00-4-4z"/>
+                <path fill="#111C59"
+                    d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm0 18a8 8 0 118-8 8 8 0 01-8 8zM12 8a4 4 0 104 4 4 4 0 00-4-4z" />
             </symbol>
             <symbol id="icon-warning" viewBox="0 0 24 24">
-                <path fill="#F5A623" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                <path fill="#F5A623" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
             </symbol>
             <symbol id="icon-search" viewBox="0 0 24 24">
-                <path fill="#111C59" d="M21 20l-4.35-4.35A7 7 0 1018 18l4 4L21 20zM5 11a6 6 0 1112 0A6 6 0 015 11z"/>
+                <path fill="#111C59" d="M21 20l-4.35-4.35A7 7 0 1018 18l4 4L21 20zM5 11a6 6 0 1112 0A6 6 0 015 11z" />
             </symbol>
             <symbol id="icon-clipboard" viewBox="0 0 24 24">
-                <path fill="#111C59" d="M19 3h-4.18A2 2 0 0013 2H11a2 2 0 00-1.82 1H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM12 7a2 2 0 110-4 2 2 0 010 4z"/>
+                <path fill="#111C59"
+                    d="M19 3h-4.18A2 2 0 0013 2H11a2 2 0 00-1.82 1H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM12 7a2 2 0 110-4 2 2 0 010 4z" />
             </symbol>
             <symbol id="icon-light" viewBox="0 0 24 24">
-                <path fill="#F2C94C" d="M9 21h6v-1H9v1zM12 2a7 7 0 00-4 12v3h8v-3a7 7 0 00-4-12z"/>
+                <path fill="#F2C94C" d="M9 21h6v-1H9v1zM12 2a7 7 0 00-4 12v3h8v-3a7 7 0 00-4-12z" />
             </symbol>
             <symbol id="icon-rocket" viewBox="0 0 24 24">
-                <path fill="#111C59" d="M12 2s4 1 6 3 3 6 3 6-1 1-4 1-6 3-6 3-2-3-3-6-1-4-1-4 3-1 5-3zM6 18v4l2-1 2 1v-4l-2-1-2 1z"/>
+                <path fill="#111C59"
+                    d="M12 2s4 1 6 3 3 6 3 6-1 1-4 1-6 3-6 3-2-3-3-6-1-4-1-4 3-1 5-3zM6 18v4l2-1 2 1v-4l-2-1-2 1z" />
             </symbol>
             <symbol id="icon-check" viewBox="0 0 24 24">
-                <path fill="#0f7a3f" d="M20.3 5.3l-11 11-5.6-5.6L6 8.4l3.3 3.3 9.1-9.1 2.2 2.2z"/>
+                <path fill="#0f7a3f" d="M20.3 5.3l-11 11-5.6-5.6L6 8.4l3.3 3.3 9.1-9.1 2.2 2.2z" />
             </symbol>
             <symbol id="icon-whatsapp" viewBox="0 0 24 24">
-                <path fill="#25D366" d="M20.52 3.48A11.86 11.86 0 0012 .5 11.9 11.9 0 003.5 9.02c0 2.1.55 4.13 1.6 5.9L2 22l7.3-3.1a11.88 11.88 0 005.7 1.5h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.2-1.25-6.2-3.45-8.36zM12 20.2c-1.8 0-3.5-.5-5-1.4l-.35-.2-4.2 1.8 1.8-4.1-.22-.35A8.7 8.7 0 013.3 9c0-4.8 4-8.7 8.7-8.7 2.3 0 4.4.9 6 2.5a8.66 8.66 0 012.5 6c0 4.8-3.9 8.7-8.7 8.7z"/>
+                <path fill="#25D366"
+                    d="M20.52 3.48A11.86 11.86 0 0012 .5 11.9 11.9 0 003.5 9.02c0 2.1.55 4.13 1.6 5.9L2 22l7.3-3.1a11.88 11.88 0 005.7 1.5h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.2-1.25-6.2-3.45-8.36zM12 20.2c-1.8 0-3.5-.5-5-1.4l-.35-.2-4.2 1.8 1.8-4.1-.22-.35A8.7 8.7 0 013.3 9c0-4.8 4-8.7 8.7-8.7 2.3 0 4.4.9 6 2.5a8.66 8.66 0 012.5 6c0 4.8-3.9 8.7-8.7 8.7z" />
             </symbol>
             <symbol id="icon-linkedin" viewBox="0 0 24 24">
-                <path fill="#0A66C2" d="M4.98 3.5A2.5 2.5 0 112.5 6a2.5 2.5 0 012.48-2.5zM3 8.98h3.98V21H3V8.98zM9.5 8.98h3.82v1.63h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.64 4.74 6.07V21h-3.98v-5.38c0-1.28-.02-2.92-1.78-2.92-1.78 0-2.05 1.39-2.05 2.83V21H9.5V8.98z"/>
+                <path fill="#0A66C2"
+                    d="M4.98 3.5A2.5 2.5 0 112.5 6a2.5 2.5 0 012.48-2.5zM3 8.98h3.98V21H3V8.98zM9.5 8.98h3.82v1.63h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.64 4.74 6.07V21h-3.98v-5.38c0-1.28-.02-2.92-1.78-2.92-1.78 0-2.05 1.39-2.05 2.83V21H9.5V8.98z" />
             </symbol>
             <symbol id="icon-facebook" viewBox="0 0 24 24">
-                <path fill="#1877F2" d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 4.99 3.66 9.13 8.44 9.95v-7.05H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.77-1.61 1.56v1.88h2.74l-.44 2.9h-2.3v7.05C18.34 21.2 22 17.06 22 12.07z"/>
+                <path fill="#1877F2"
+                    d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 4.99 3.66 9.13 8.44 9.95v-7.05H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.77-1.61 1.56v1.88h2.74l-.44 2.9h-2.3v7.05C18.34 21.2 22 17.06 22 12.07z" />
             </symbol>
             <!-- Iconos para sección Digital Concept -->
             <symbol id="icon-diagnostic" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M19.88 18.47c.44-.7.7-1.51.7-2.39 0-2.49-2.01-4.5-4.5-4.5s-4.5 2.01-4.5 4.5 2.01 4.5 4.5 4.5c.88 0 1.69-.26 2.39-.7L21.29 22 22 21.29l-2.12-2.82zm-3.8.11a2.5 2.5 0 010-5 2.5 2.5 0 010 5zM3 4v16h8.11a6.45 6.45 0 01-1.09-2H5V6h14v4.02c.74.12 1.39.37 2 .75V4H3z"/>
-                <path fill="currentColor" d="M7 8h6v2H7V8zm0 4h4v2H7v-2z"/>
+                <path fill="currentColor"
+                    d="M19.88 18.47c.44-.7.7-1.51.7-2.39 0-2.49-2.01-4.5-4.5-4.5s-4.5 2.01-4.5 4.5 2.01 4.5 4.5 4.5c.88 0 1.69-.26 2.39-.7L21.29 22 22 21.29l-2.12-2.82zm-3.8.11a2.5 2.5 0 010-5 2.5 2.5 0 010 5zM3 4v16h8.11a6.45 6.45 0 01-1.09-2H5V6h14v4.02c.74.12 1.39.37 2 .75V4H3z" />
+                <path fill="currentColor" d="M7 8h6v2H7V8zm0 4h4v2H7v-2z" />
             </symbol>
             <symbol id="icon-radar" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-14v5.17l3.59 3.59 1.41-1.41L13 10.34V6h-2z"/>
-                <circle fill="currentColor" cx="12" cy="12" r="3"/>
+                <path fill="currentColor"
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-14v5.17l3.59 3.59 1.41-1.41L13 10.34V6h-2z" />
+                <circle fill="currentColor" cx="12" cy="12" r="3" />
             </symbol>
             <symbol id="icon-brain" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M15.5 2c-1.74 0-3.23.99-3.97 2.44A4.5 4.5 0 007 2C4.24 2 2 4.24 2 7a4.98 4.98 0 002.23 4.16A5 5 0 002 15c0 2.76 2.24 5 5 5h1v2h2v-2h4v2h2v-2h1c2.76 0 5-2.24 5-5 0-1.59-.74-3-1.89-3.93A5 5 0 0022 7c0-2.76-2.24-5-5-5h-1.5zM7 4a3 3 0 013 3H8a1 1 0 01-1-1V4zm10 0v2a1 1 0 01-1 1h-2a3 3 0 013-3zM7 18a3 3 0 01-3-3c0-1.3.84-2.4 2-2.82V14h2v-2h2v2h2v-2h2v2h2v-1.82A3.01 3.01 0 0120 15a3 3 0 01-3 3H7z"/>
+                <path fill="currentColor"
+                    d="M15.5 2c-1.74 0-3.23.99-3.97 2.44A4.5 4.5 0 007 2C4.24 2 2 4.24 2 7a4.98 4.98 0 002.23 4.16A5 5 0 002 15c0 2.76 2.24 5 5 5h1v2h2v-2h4v2h2v-2h1c2.76 0 5-2.24 5-5 0-1.59-.74-3-1.89-3.93A5 5 0 0022 7c0-2.76-2.24-5-5-5h-1.5zM7 4a3 3 0 013 3H8a1 1 0 01-1-1V4zm10 0v2a1 1 0 01-1 1h-2a3 3 0 013-3zM7 18a3 3 0 01-3-3c0-1.3.84-2.4 2-2.82V14h2v-2h2v2h2v-2h2v2h2v-1.82A3.01 3.01 0 0120 15a3 3 0 01-3 3H7z" />
             </symbol>
             <symbol id="icon-blueprint" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM4 20V4h16v16H4zm2-2h12v-2H6v2zm0-4h4v-2H6v2zm6 0h6v-2h-6v2zM6 10h12V8H6v2z"/>
+                <path fill="currentColor"
+                    d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM4 20V4h16v16H4zm2-2h12v-2H6v2zm0-4h4v-2H6v2zm6 0h6v-2h-6v2zM6 10h12V8H6v2z" />
             </symbol>
             <symbol id="icon-launch" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.05-4.05c.47-.47 1.15-.68 1.81-.55l1.33.26zM11.17 17s3.74-1.55 5.89-3.7c5.4-5.4 4.48-12.84 4.48-12.84s-7.44-.92-12.84 4.48C6.56 7.08 5 10.82 5 10.82l6.17 6.17zM14.5 6.5c.83-.83 2.17-.83 3 0s.83 2.17 0 3-2.17.83-3 0-.83-2.17 0-3zM5 18c-.28-.45-.77-2.94-3-5 .67.83 1.81 2.56 2.08 3.42-.39.39-.42 1.12-.42 1.58h2c.46 0 1.19-.04 1.58-.42C8.03 18.98 6.39 20.12 5 21c-2-2.17-4.47-2.66-5-3 1.58 0 3.39-.66 5 0z"/>
+                <path fill="currentColor"
+                    d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.05-4.05c.47-.47 1.15-.68 1.81-.55l1.33.26zM11.17 17s3.74-1.55 5.89-3.7c5.4-5.4 4.48-12.84 4.48-12.84s-7.44-.92-12.84 4.48C6.56 7.08 5 10.82 5 10.82l6.17 6.17zM14.5 6.5c.83-.83 2.17-.83 3 0s.83 2.17 0 3-2.17.83-3 0-.83-2.17 0-3zM5 18c-.28-.45-.77-2.94-3-5 .67.83 1.81 2.56 2.08 3.42-.39.39-.42 1.12-.42 1.58h2c.46 0 1.19-.04 1.58-.42C8.03 18.98 6.39 20.12 5 21c-2-2.17-4.47-2.66-5-3 1.58 0 3.39-.66 5 0z" />
             </symbol>
             <symbol id="icon-tasklist" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M3 5h2V3H3v2zm0 8h2v-2H3v2zm0 8h2v-2H3v2zm4-16h14V3H7v2zm0 8h14v-2H7v2zm0 8h14v-2H7v2zm-3-4h2v-2H4v2zm0-8h2V7H4v2z"/>
-                <path fill="currentColor" d="M10 17l-3.5-3.5 1.41-1.41L10 14.17l5.59-5.59L17 10l-7 7z"/>
+                <path fill="currentColor"
+                    d="M3 5h2V3H3v2zm0 8h2v-2H3v2zm0 8h2v-2H3v2zm4-16h14V3H7v2zm0 8h14v-2H7v2zm0 8h14v-2H7v2zm-3-4h2v-2H4v2zm0-8h2V7H4v2z" />
+                <path fill="currentColor" d="M10 17l-3.5-3.5 1.41-1.41L10 14.17l5.59-5.59L17 10l-7 7z" />
             </symbol>
             <!-- Iconos para cards de audiencia -->
             <symbol id="icon-corporate" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+                <path fill="currentColor"
+                    d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
             </symbol>
             <symbol id="icon-factory" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M22 22H2V10l7-3v3l7-3v3l6-3v15zM4 20h16V9.83l-4 2V8.83l-7 3V8.83l-5 2.15V20zm2-8v2h2v-2H6zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zm-8 4v2h2v-2H6zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z"/>
+                <path fill="currentColor"
+                    d="M22 22H2V10l7-3v3l7-3v3l6-3v15zM4 20h16V9.83l-4 2V8.83l-7 3V8.83l-5 2.15V20zm2-8v2h2v-2H6zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zm-8 4v2h2v-2H6zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z" />
             </symbol>
             <symbol id="icon-store" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M18.36 9l.6 3H5.04l.6-3h12.72M20 4H4v2h16V4zm0 3H4l-1 5v2h1v6h10v-6h4v6h2v-6h1v-2l-1-5zM6 18v-4h6v4H6z"/>
+                <path fill="currentColor"
+                    d="M18.36 9l.6 3H5.04l.6-3h12.72M20 4H4v2h16V4zm0 3H4l-1 5v2h1v6h10v-6h4v6h2v-6h1v-2l-1-5zM6 18v-4h6v4H6z" />
             </symbol>
             <symbol id="icon-university" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                <path fill="currentColor"
+                    d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
             </symbol>
             <symbol id="icon-home" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 2.84L18 11v7h-2v-6H8v6H6v-7l6-5.16z"/>
+                <path fill="currentColor"
+                    d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 2.84L18 11v7h-2v-6H8v6H6v-7l6-5.16z" />
             </symbol>
             <!-- Iconos específicos para Quiénes Somos -->
             <symbol id="icon-car" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.71454 16.826C8.7177 17.7092 8.20137 18.5073 7.40665 18.8476C6.61193 19.1878 5.6956 19.0031 5.08554 18.3797C4.47547 17.7563 4.29202 16.8172 4.62085 16.0008C4.94968 15.1845 5.72591 14.652 6.58709 14.652C7.15029 14.6509 7.69084 14.8794 8.08981 15.2871C8.48879 15.6948 8.71351 16.2483 8.71454 16.826Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1636 16.826C19.1667 17.7092 18.6504 18.5073 17.8557 18.8476C17.061 19.1878 16.1446 19.0031 15.5346 18.3797C14.9245 17.7563 14.7411 16.8172 15.0699 16.0008C15.3987 15.1845 16.1749 14.652 17.0361 14.652C17.5993 14.6509 18.1399 14.8794 18.5388 15.2871C18.9378 15.6948 19.1625 16.2483 19.1636 16.826Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <path d="M2.61096 9.99042L4.0628 8.213L9.79678 5.75H7.74245C6.91377 5.75 6.37329 6.00714 5.94824 6.42712M22.425 11.324V13M21.3622 10.249H18.2276M0.974976 11.324V13M3.31498 10.249H9.79678M9.04678 5V10.249M14.9087 16.076H8.71453M19.1636 16.076H21.3613M4.45963 16.076H2.0387M22.425 15.751V13M0.974976 15.751V13M0.974976 13H2.91815M22.425 13H20.3999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8.71454 16.826C8.7177 17.7092 8.20137 18.5073 7.40665 18.8476C6.61193 19.1878 5.6956 19.0031 5.08554 18.3797C4.47547 17.7563 4.29202 16.8172 4.62085 16.0008C4.94968 15.1845 5.72591 14.652 6.58709 14.652C7.15029 14.6509 7.69084 14.8794 8.08981 15.2871C8.48879 15.6948 8.71351 16.2483 8.71454 16.826Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    fill="none" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M19.1636 16.826C19.1667 17.7092 18.6504 18.5073 17.8557 18.8476C17.061 19.1878 16.1446 19.0031 15.5346 18.3797C14.9245 17.7563 14.7411 16.8172 15.0699 16.0008C15.3987 15.1845 16.1749 14.652 17.0361 14.652C17.5993 14.6509 18.1399 14.8794 18.5388 15.2871C18.9378 15.6948 19.1625 16.2483 19.1636 16.826Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    fill="none" />
+                <path
+                    d="M2.61096 9.99042L4.0628 8.213L9.79678 5.75H7.74245C6.91377 5.75 6.37329 6.00714 5.94824 6.42712M22.425 11.324V13M21.3622 10.249H18.2276M0.974976 11.324V13M3.31498 10.249H9.79678M9.04678 5V10.249M14.9087 16.076H8.71453M19.1636 16.076H21.3613M4.45963 16.076H2.0387M22.425 15.751V13M0.974976 15.751V13M0.974976 13H2.91815M22.425 13H20.3999"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    fill="none" />
             </symbol>
             <symbol id="icon-house" viewBox="0 0 24 24">
-                <path d="M3 11.5L12 4l9 7.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M5 11.5v7.5a1 1 0 001 1h3v-6h6v6h3a1 1 0 001-1v-7.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 11.5L12 4l9 7.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M5 11.5v7.5a1 1 0 001 1h3v-6h6v6h3a1 1 0 001-1v-7.5" fill="none" stroke="currentColor"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </symbol>
             <symbol id="icon-shop" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.87617 3.75H19.1238L21 8.86683V10.5C21 11.2516 20.7177 11.9465 20.25 12.4667V21H3.75V12.4667C3.28234 11.9465 3 11.2516 3 10.5V8.86683L4.87617 3.75ZM18.1875 13.3929C18.3807 13.3929 18.5688 13.3731 18.75 13.3355V19.5H15V15H9V19.5H5.25V13.3355C5.43122 13.3731 5.61926 13.3929 5.8125 13.3929C6.63629 13.3929 7.36559 13.0334 7.875 12.4667C8.38441 13.0334 9.11371 13.3929 9.9375 13.3929C10.7613 13.3929 11.4906 13.0334 12 12.4667C12.5094 13.0334 13.2387 13.3929 14.0625 13.3929C14.8863 13.3929 15.6156 13.0334 16.125 12.4667C16.6344 13.0334 17.3637 13.3929 18.1875 13.3929ZM10.5 19.5H13.5V16.5H10.5V19.5ZM19.5 9.75V10.5C19.5 11.2965 18.8856 11.8929 18.1875 11.8929C17.4894 11.8929 16.875 11.2965 16.875 10.5V9.75H19.5ZM19.1762 8.25L18.0762 5.25H5.92383L4.82383 8.25H19.1762ZM4.5 9.75V10.5C4.5 11.2965 5.11439 11.8929 5.8125 11.8929C6.51061 11.8929 7.125 11.2965 7.125 10.5V9.75H4.5ZM8.625 9.75V10.5C8.625 11.2965 9.23939 11.8929 9.9375 11.8929C10.6356 11.8929 11.25 11.2965 11.25 10.5V9.75H8.625ZM12.75 9.75V10.5C12.75 11.2965 13.3644 11.8929 14.0625 11.8929C14.7606 11.8929 15.375 11.2965 15.375 10.5V9.75H12.75Z" fill="currentColor"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.87617 3.75H19.1238L21 8.86683V10.5C21 11.2516 20.7177 11.9465 20.25 12.4667V21H3.75V12.4667C3.28234 11.9465 3 11.2516 3 10.5V8.86683L4.87617 3.75ZM18.1875 13.3929C18.3807 13.3929 18.5688 13.3731 18.75 13.3355V19.5H15V15H9V19.5H5.25V13.3355C5.43122 13.3731 5.61926 13.3929 5.8125 13.3929C6.63629 13.3929 7.36559 13.0334 7.875 12.4667C8.38441 13.0334 9.11371 13.3929 9.9375 13.3929C10.7613 13.3929 11.4906 13.0334 12 12.4667C12.5094 13.0334 13.2387 13.3929 14.0625 13.3929C14.8863 13.3929 15.6156 13.0334 16.125 12.4667C16.6344 13.0334 17.3637 13.3929 18.1875 13.3929ZM10.5 19.5H13.5V16.5H10.5V19.5ZM19.5 9.75V10.5C19.5 11.2965 18.8856 11.8929 18.1875 11.8929C17.4894 11.8929 16.875 11.2965 16.875 10.5V9.75H19.5ZM19.1762 8.25L18.0762 5.25H5.92383L4.82383 8.25H19.1762ZM4.5 9.75V10.5C4.5 11.2965 5.11439 11.8929 5.8125 11.8929C6.51061 11.8929 7.125 11.2965 7.125 10.5V9.75H4.5ZM8.625 9.75V10.5C8.625 11.2965 9.23939 11.8929 9.9375 11.8929C10.6356 11.8929 11.25 11.2965 11.25 10.5V9.75H8.625ZM12.75 9.75V10.5C12.75 11.2965 13.3644 11.8929 14.0625 11.8929C14.7606 11.8929 15.375 11.2965 15.375 10.5V9.75H12.75Z"
+                    fill="currentColor" />
             </symbol>
             <symbol id="icon-app" viewBox="0 0 24 24">
-                <rect x="6" y="2" width="12" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
-                <circle cx="12" cy="18" r="0.9" fill="currentColor"/>
-                <rect x="9" y="5" width="6" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1"/>
+                <rect x="6" y="2" width="12" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" />
+                <circle cx="12" cy="18" r="0.9" fill="currentColor" />
+                <rect x="9" y="5" width="6" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1" />
             </symbol>
             <symbol id="icon-person" viewBox="0 0 24 24">
-                <circle cx="12" cy="4" r="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                <path d="M6.04779 10.849L6.28497 10.1375H6.28497L6.04779 10.849ZM8.22309 11.5741L7.98592 12.2856H7.98592L8.22309 11.5741ZM9.01682 13.256L8.31681 12.9868H8.31681L9.01682 13.256ZM7.77003 16.4977L8.47004 16.7669H8.47004L7.77003 16.4977ZM17.9522 10.849L17.715 10.1375H17.715L17.9522 10.849ZM15.7769 11.5741L16.0141 12.2856H16.0141L15.7769 11.5741ZM14.9832 13.256L15.6832 12.9868L14.9832 13.256ZM16.23 16.4977L15.53 16.7669L16.23 16.4977ZM10.4242 17.7574L11.0754 18.1295L10.4242 17.7574ZM12 14.9997L12.6512 14.6276C12.5177 14.394 12.2691 14.2497 12 14.2497C11.7309 14.2497 11.4823 14.394 11.3488 14.6276L12 14.9997ZM17.1465 7.8969L16.9894 7.16355L17.1465 7.8969ZM15.249 8.30353L15.4061 9.03688V9.03688L15.249 8.30353ZM8.75102 8.30353L8.90817 7.57018V7.57018L8.75102 8.30353ZM6.85345 7.89691L6.69631 8.63026L6.85345 7.89691ZM13.5758 17.7574L12.9246 18.1295V18.1295L13.5758 17.7574ZM15.0384 8.34826L14.8865 7.61381L14.8865 7.61381L15.0384 8.34826ZM8.96161 8.34826L8.80969 9.08272L8.80969 9.08272L8.96161 8.34826ZM15.2837 11.7666L15.6777 12.4048L15.2837 11.7666ZM14.8182 12.753L15.5613 12.6514V12.6514L14.8182 12.753ZM8.71625 11.7666L8.3223 12.4048H8.3223L8.71625 11.7666ZM9.18177 12.753L9.92485 12.8546V12.8546L9.18177 12.753Z" fill="currentColor"/>
+                <circle cx="12" cy="4" r="2" stroke="currentColor" stroke-width="1.5" fill="none" />
+                <path
+                    d="M6.04779 10.849L6.28497 10.1375H6.28497L6.04779 10.849ZM8.22309 11.5741L7.98592 12.2856H7.98592L8.22309 11.5741ZM9.01682 13.256L8.31681 12.9868H8.31681L9.01682 13.256ZM7.77003 16.4977L8.47004 16.7669H8.47004L7.77003 16.4977ZM17.9522 10.849L17.715 10.1375H17.715L17.9522 10.849ZM15.7769 11.5741L16.0141 12.2856H16.0141L15.7769 11.5741ZM14.9832 13.256L15.6832 12.9868L14.9832 13.256ZM16.23 16.4977L15.53 16.7669L16.23 16.4977ZM10.4242 17.7574L11.0754 18.1295L10.4242 17.7574ZM12 14.9997L12.6512 14.6276C12.5177 14.394 12.2691 14.2497 12 14.2497C11.7309 14.2497 11.4823 14.394 11.3488 14.6276L12 14.9997ZM17.1465 7.8969L16.9894 7.16355L17.1465 7.8969ZM15.249 8.30353L15.4061 9.03688V9.03688L15.249 8.30353ZM8.75102 8.30353L8.90817 7.57018V7.57018L8.75102 8.30353ZM6.85345 7.89691L6.69631 8.63026L6.85345 7.89691ZM13.5758 17.7574L12.9246 18.1295V18.1295L13.5758 17.7574ZM15.0384 8.34826L14.8865 7.61381L14.8865 7.61381L15.0384 8.34826ZM8.96161 8.34826L8.80969 9.08272L8.80969 9.08272L8.96161 8.34826ZM15.2837 11.7666L15.6777 12.4048L15.2837 11.7666ZM14.8182 12.753L15.5613 12.6514V12.6514L14.8182 12.753ZM8.71625 11.7666L8.3223 12.4048H8.3223L8.71625 11.7666ZM9.18177 12.753L9.92485 12.8546V12.8546L9.18177 12.753Z"
+                    fill="currentColor" />
             </symbol>
             <symbol id="icon-fingerprint" viewBox="0 0 512 512">
-                <path d="M56.79,200.58l12.36,7.5L76.5,194.5C93.07,166.75,143.78,102,256,102,371,102,420,172.32,436.1,195.46l8.16,12.7L469.88,192l-8.54-13.36c-8.88-12.85-27.52-39.53-60.78-63.1C360.15,86.82,311.5,72.25,256,72.25c-128.07,0-186.69,75.11-206,107.25L42.63,192,54,198.86a14.09,14.09,0,0,0,1.63,1.1A12.57,12.57,0,0,0,56.79,200.58Z" fill="currentColor"/>
-                <path d="M379.22,172.32C343.68,143.39,301.1,128.07,256,128.07c-97.52,0-162.31,66-183.33,131.47C53.42,320,76.82,407.61,77.8,411.36l4.38,13.81,29.93-6.43-4.74-15c-.21-.75-22.1-82.93-5.41-135.21,9-28.08,27.73-55.4,51.35-74.79C181.81,170.39,217.35,158,256,158c90.58,0,141.93,70.61,156.45,108.11,11.27,28.93,8.67,61.82-6.28,82-5.53,7.39-15.28,16.07-30.12,15.32-33.81-1.72-39.66-18.43-47.79-50.25-3.9-15.32-7.9-31.18-17.87-44-12.14-15.75-29.8-23.36-54.28-23.36-26.33,0-46.27,8.68-59.38,25.72-28.6,37.28-10,100.93-9.21,103.61l.22.85c1.41,3.86,36.08,96.65,128.93,119.68l14.77,3.21,8.09-28.71-15.27-3.43c-74.22-18.43-105.21-94.39-107.59-100.39a152.44,152.44,0,0,1-5.10-29.79c-1.08-14.46-.32-34.39,9.43-47.14,7.15-9.32,18.64-13.82,35-13.82,29.79,0,34.78,14.57,42.58,44.79,7.58,29.46,18,69.85,75.84,72.75,22.21,1.07,42.26-8.79,56.34-27.65,21.13-28.28,25.14-71.57,10.19-110.14C429.27,225,406.74,194.82,379.22,172.32Z" fill="currentColor"/>
-                <path d="M154.18,343.21c-3.47-28.28,1.41-71,26.55-98.78,17.44-19.29,42.79-29,75.19-29,37.49,0,65.87,16.72,84.51,49.61a154,154,0,0,1,17.88,53.25l1.43,14.69,30-2.2a112.63,112.63,0,0,0-1-15.6c-.11-1.28-3.57-32.46-21-63.75C343.68,208.32,305.11,185.5,256,185.5c-41.5,0-74.55,13.18-98.06,39.11-31.85,35.14-38.35,86.25-33.91,122.35v.33C132,401.82,153,445.43,190.15,484.43l11.6,11.22,20.95-21.79-10.34-9.79C179.64,429.79,161.11,391.43,154.18,343.21Z" fill="currentColor"/>
+                <path
+                    d="M56.79,200.58l12.36,7.5L76.5,194.5C93.07,166.75,143.78,102,256,102,371,102,420,172.32,436.1,195.46l8.16,12.7L469.88,192l-8.54-13.36c-8.88-12.85-27.52-39.53-60.78-63.1C360.15,86.82,311.5,72.25,256,72.25c-128.07,0-186.69,75.11-206,107.25L42.63,192,54,198.86a14.09,14.09,0,0,0,1.63,1.1A12.57,12.57,0,0,0,56.79,200.58Z"
+                    fill="currentColor" />
+                <path
+                    d="M379.22,172.32C343.68,143.39,301.1,128.07,256,128.07c-97.52,0-162.31,66-183.33,131.47C53.42,320,76.82,407.61,77.8,411.36l4.38,13.81,29.93-6.43-4.74-15c-.21-.75-22.1-82.93-5.41-135.21,9-28.08,27.73-55.4,51.35-74.79C181.81,170.39,217.35,158,256,158c90.58,0,141.93,70.61,156.45,108.11,11.27,28.93,8.67,61.82-6.28,82-5.53,7.39-15.28,16.07-30.12,15.32-33.81-1.72-39.66-18.43-47.79-50.25-3.9-15.32-7.9-31.18-17.87-44-12.14-15.75-29.8-23.36-54.28-23.36-26.33,0-46.27,8.68-59.38,25.72-28.6,37.28-10,100.93-9.21,103.61l.22.85c1.41,3.86,36.08,96.65,128.93,119.68l14.77,3.21,8.09-28.71-15.27-3.43c-74.22-18.43-105.21-94.39-107.59-100.39a152.44,152.44,0,0,1-5.10-29.79c-1.08-14.46-.32-34.39,9.43-47.14,7.15-9.32,18.64-13.82,35-13.82,29.79,0,34.78,14.57,42.58,44.79,7.58,29.46,18,69.85,75.84,72.75,22.21,1.07,42.26-8.79,56.34-27.65,21.13-28.28,25.14-71.57,10.19-110.14C429.27,225,406.74,194.82,379.22,172.32Z"
+                    fill="currentColor" />
+                <path
+                    d="M154.18,343.21c-3.47-28.28,1.41-71,26.55-98.78,17.44-19.29,42.79-29,75.19-29,37.49,0,65.87,16.72,84.51,49.61a154,154,0,0,1,17.88,53.25l1.43,14.69,30-2.2a112.63,112.63,0,0,0-1-15.6c-.11-1.28-3.57-32.46-21-63.75C343.68,208.32,305.11,185.5,256,185.5c-41.5,0-74.55,13.18-98.06,39.11-31.85,35.14-38.35,86.25-33.91,122.35v.33C132,401.82,153,445.43,190.15,484.43l11.6,11.22,20.95-21.79-10.34-9.79C179.64,429.79,161.11,391.43,154.18,343.21Z"
+                    fill="currentColor" />
             </symbol>
         </svg>
     </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <picture class="brand-mark">
                     <source media="(max-width: 576px)" srcset="assets/img/logo/1_Logo_ALSEG_Vertical.png">
-                    <img src="assets/img/logo/1_Logo_ALSEG.png" alt="Grupo Alseg" class="brand-mark-img" onerror="this.onerror=null;this.src='assets/img/logo/1_Logo_ALSEG.png'">
+                    <img src="assets/img/logo/1_Logo_ALSEG.png" alt="Grupo Alseg" class="brand-mark-img"
+                        onerror="this.onerror=null;this.src='assets/img/logo/1_Logo_ALSEG.png'">
                 </picture>
-                <img src="assets/img/logo/1_Logo_ALSEG_Horizontal letras.png" alt="Grupo Alseg" class="brand-wordmark" onerror="this.onerror=null;this.src='assets/img/logo/1_Logo_ALSEG_Horizontal.png'">
+                <img src="assets/img/logo/1_Logo_ALSEG_Horizontal letras.png" alt="Grupo Alseg" class="brand-wordmark"
+                    onerror="this.onerror=null;this.src='assets/img/logo/1_Logo_ALSEG_Horizontal.png'">
                 <span class="logo-text"></span>
             </div>
             <div class="nav-menu">
@@ -180,14 +232,22 @@
                     Más que cámaras y alarmas: ecosistemas de seguridad y monitoreo 24/7.
                 </p>
                 <div class="hero-cta fade-in">
-                    <button class="btn-primary">Solicitar Asesoría</button>
-                    <button class="btn-secondary">Explorar soluciones</button>
+                    <button class="btn-primary">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Solicitar Asesoría
+                    </button>
+                    <button class="btn-secondary">
+                        Explorar soluciones
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="hero-graphics">
                     <div class="security-circle">
-                        <div class="inner-circle"></div>
+                        <div class="inner-circle">
+                            <img src="assets/img/logo/1_Logo_ALSEG.png" alt="Grupo ALSEG" />
+                        </div>
                         <div class="security-icons">
                             <div class="icon-item" data-delay="0">
                                 <img src="assets/img/Security.png" alt="Seguridad móvil" />
@@ -258,53 +318,64 @@
             <div class="section-header">
                 <h2 class="section-title">Quiénes Somos</h2>
                 <p class="section-subtitle">
-                    Grupo especialistas en seguridad con soluciones integrales
+                    Especialistas en seguridad con soluciones integrales 
                 </p>
             </div>
             <div class="about-content">
                 <div class="about-text">
                     <h3>Experiencia que Genera Confianza</h3>
                     <p>
-                        Especialistas en crear ecosistemas que evolucionan con la seguridad de tu patrimonio
-                    </p>
+                        Creamos ecosistemas que evolucionan con la seguridad de tu patrimonio                    </p>
                     <p>
                         Diseñamos estratégias de protección adaptadas a cualquier necesidad
                     </p>
                     <div class="stats">
-                            <div class="stat-item">
-                                <h4 class="counter" data-target="1000" data-plus="true">0</h4>
-                                <p>Empresas Protegidas</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4 class="counter" data-target="24">0</h4>
-                                <p>Horas / 7</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4 class="counter" data-target="15">0</h4>
-                                <p>Años de Experiencia</p>
-                            </div>
+                        <div class="stat-item">
+                            <h4 class="counter" data-target="1000" data-plus="true">0</h4>
+                            <p>Empresas Protegidas</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="counter" data-target="24">0</h4>
+                            <p>Horas / 7</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="counter" data-target="15">0</h4>
+                            <p>Años de Experiencia</p>
+                        </div>
                     </div>
                 </div>
                 <div class="about-visual">
                     <!-- 6 iconos flotantes con animación pop/burbuja -->
                     <div class="floating-icons-grid" aria-hidden="true">
                         <div class="bubble-icon icon-1">
-                            <svg viewBox="0 0 24 24"><use href="#icon-car"></use></svg>
+                            <svg viewBox="0 0 24 24">
+                                <use href="#icon-car"></use>
+                            </svg>
                         </div>
                         <div class="bubble-icon icon-2">
-                            <svg viewBox="0 0 24 24"><use href="#icon-house"></use></svg>
+                            <svg viewBox="0 0 24 24">
+                                <use href="#icon-house"></use>
+                            </svg>
                         </div>
                         <div class="bubble-icon icon-3">
-                            <svg viewBox="0 0 24 24"><use href="#icon-shop"></use></svg>
+                            <svg viewBox="0 0 24 24">
+                                <use href="#icon-shop"></use>
+                            </svg>
                         </div>
                         <div class="bubble-icon icon-4">
-                            <svg viewBox="0 0 24 24"><use href="#icon-app"></use></svg>
+                            <svg viewBox="0 0 24 24">
+                                <use href="#icon-app"></use>
+                            </svg>
                         </div>
                         <div class="bubble-icon icon-5">
-                            <svg viewBox="0 0 24 24"><use href="#icon-person"></use></svg>
+                            <svg viewBox="0 0 24 24">
+                                <use href="#icon-person"></use>
+                            </svg>
                         </div>
                         <div class="bubble-icon icon-6">
-                            <svg viewBox="0 0 512 512"><use href="#icon-fingerprint"></use></svg>
+                            <svg viewBox="0 0 512 512">
+                                <use href="#icon-fingerprint"></use>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -330,7 +401,7 @@
                     Pilares conectados que trabajan como un ecosistema completo
                 </p>
             </div>
-            
+
             <div class="cycle-diagram">
                 <!-- Centro del ciclo -->
                 <div class="cycle-center">
@@ -391,9 +462,7 @@
                     <div class="element-card">
                         <div class="card-step-num">03</div>
                         <div class="element-icon">
-                            <svg class="icon" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                                <use href="#icon-clipboard"></use>
-                            </svg>
+                            <img class="icon" src="assets/img/svg/Asesoria.svg" alt="Asesoría" />
                         </div>
                         <h4>Asesoría de Riesgos</h4>
                         <p>Diagnóstico y mejora continua</p>
@@ -410,13 +479,14 @@
                 <div class="cycle-orbit" aria-hidden="true"></div>
 
                 <!-- Órbita circular SVG que conecta las 3 cards -->
-                <svg class="cycle-connections" viewBox="0 0 950 700" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <svg class="cycle-connections" viewBox="0 0 950 700" preserveAspectRatio="xMidYMid meet"
+                    aria-hidden="true">
                     <!-- Gran elipse de órbita -->
-                    <ellipse cx="475" cy="340" rx="340" ry="280" class="orbit-path"/>
+                    <ellipse cx="475" cy="340" rx="340" ry="280" class="orbit-path" />
                     <!-- Flechitas/puntos decorativos en la órbita -->
-                    <circle cx="135" cy="310" r="4" fill="rgba(24,34,89,0.18)"/>
-                    <circle cx="475" cy="620" r="4" fill="rgba(24,34,89,0.18)"/>
-                    <circle cx="815" cy="310" r="4" fill="rgba(24,34,89,0.18)"/>
+                    <circle cx="135" cy="310" r="4" fill="rgba(24,34,89,0.18)" />
+                    <circle cx="475" cy="620" r="4" fill="rgba(24,34,89,0.18)" />
+                    <circle cx="815" cy="310" r="4" fill="rgba(24,34,89,0.18)" />
                 </svg>
             </div>
         </div>
@@ -440,7 +510,7 @@
             <div class="section-header">
                 <h2 class="section-title">Soluciones</h2>
                 <p class="section-subtitle">
-                    La mayoría de empresas tienen sistemas fragmentados que no ofrecen protección real
+                    Resolvemos las fallas comunes dentro del mercado 
                 </p>
             </div>
             <div class="problem-grid">
@@ -484,45 +554,48 @@
         <div class="circuit-pattern" aria-hidden="true">
             <svg class="circuit-svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
                 <!-- Líneas horizontales -->
-                <line x1="0" y1="80" x2="800" y2="80" class="circuit-line cl-1"/>
-                <line x1="0" y1="200" x2="800" y2="200" class="circuit-line cl-2"/>
-                <line x1="0" y1="350" x2="800" y2="350" class="circuit-line cl-3"/>
-                <line x1="0" y1="480" x2="800" y2="480" class="circuit-line cl-4"/>
+                <line x1="0" y1="80" x2="800" y2="80" class="circuit-line cl-1" />
+                <line x1="0" y1="200" x2="800" y2="200" class="circuit-line cl-2" />
+                <line x1="0" y1="350" x2="800" y2="350" class="circuit-line cl-3" />
+                <line x1="0" y1="480" x2="800" y2="480" class="circuit-line cl-4" />
                 <!-- Líneas verticales -->
-                <line x1="120" y1="0" x2="120" y2="600" class="circuit-line cl-5"/>
-                <line x1="320" y1="0" x2="320" y2="600" class="circuit-line cl-6"/>
-                <line x1="520" y1="0" x2="520" y2="600" class="circuit-line cl-7"/>
-                <line x1="680" y1="0" x2="680" y2="600" class="circuit-line cl-8"/>
+                <line x1="120" y1="0" x2="120" y2="600" class="circuit-line cl-5" />
+                <line x1="320" y1="0" x2="320" y2="600" class="circuit-line cl-6" />
+                <line x1="520" y1="0" x2="520" y2="600" class="circuit-line cl-7" />
+                <line x1="680" y1="0" x2="680" y2="600" class="circuit-line cl-8" />
                 <!-- Nodos / puntos de conexión -->
-                <circle cx="120" cy="80" r="5" class="circuit-node cn-1"/>
-                <circle cx="320" cy="80" r="5" class="circuit-node cn-2"/>
-                <circle cx="520" cy="200" r="5" class="circuit-node cn-3"/>
-                <circle cx="680" cy="200" r="5" class="circuit-node cn-4"/>
-                <circle cx="120" cy="350" r="5" class="circuit-node cn-5"/>
-                <circle cx="320" cy="350" r="5" class="circuit-node cn-6"/>
-                <circle cx="520" cy="480" r="5" class="circuit-node cn-7"/>
-                <circle cx="680" cy="480" r="5" class="circuit-node cn-8"/>
-                <circle cx="120" cy="200" r="4" class="circuit-node cn-9"/>
-                <circle cx="680" cy="350" r="4" class="circuit-node cn-10"/>
-                <circle cx="320" cy="480" r="4" class="circuit-node cn-11"/>
-                <circle cx="520" cy="80" r="4" class="circuit-node cn-12"/>
+                <circle cx="120" cy="80" r="5" class="circuit-node cn-1" />
+                <circle cx="320" cy="80" r="5" class="circuit-node cn-2" />
+                <circle cx="520" cy="200" r="5" class="circuit-node cn-3" />
+                <circle cx="680" cy="200" r="5" class="circuit-node cn-4" />
+                <circle cx="120" cy="350" r="5" class="circuit-node cn-5" />
+                <circle cx="320" cy="350" r="5" class="circuit-node cn-6" />
+                <circle cx="520" cy="480" r="5" class="circuit-node cn-7" />
+                <circle cx="680" cy="480" r="5" class="circuit-node cn-8" />
+                <circle cx="120" cy="200" r="4" class="circuit-node cn-9" />
+                <circle cx="680" cy="350" r="4" class="circuit-node cn-10" />
+                <circle cx="320" cy="480" r="4" class="circuit-node cn-11" />
+                <circle cx="520" cy="80" r="4" class="circuit-node cn-12" />
                 <!-- Paths curvos conectores -->
-                <path d="M120,80 Q220,80 220,200 Q220,350 320,350" class="circuit-path cp-1" fill="none"/>
-                <path d="M520,200 Q600,200 600,350 Q600,480 680,480" class="circuit-path cp-2" fill="none"/>
-                <path d="M320,80 Q420,80 420,200 Q420,200 520,200" class="circuit-path cp-3" fill="none"/>
-                <path d="M120,350 Q220,350 220,480 Q220,480 320,480" class="circuit-path cp-4" fill="none"/>
+                <path d="M120,80 Q220,80 220,200 Q220,350 320,350" class="circuit-path cp-1" fill="none" />
+                <path d="M520,200 Q600,200 600,350 Q600,480 680,480" class="circuit-path cp-2" fill="none" />
+                <path d="M320,80 Q420,80 420,200 Q420,200 520,200" class="circuit-path cp-3" fill="none" />
+                <path d="M120,350 Q220,350 220,480 Q220,480 320,480" class="circuit-path cp-4" fill="none" />
                 <!-- Pulsos de energía -->
                 <circle r="3" class="circuit-pulse pulse-1">
-                    <animateMotion dur="4s" repeatCount="indefinite" path="M120,80 Q220,80 220,200 Q220,350 320,350"/>
+                    <animateMotion dur="4s" repeatCount="indefinite" path="M120,80 Q220,80 220,200 Q220,350 320,350" />
                 </circle>
                 <circle r="3" class="circuit-pulse pulse-2">
-                    <animateMotion dur="5s" repeatCount="indefinite" path="M520,200 Q600,200 600,350 Q600,480 680,480"/>
+                    <animateMotion dur="5s" repeatCount="indefinite"
+                        path="M520,200 Q600,200 600,350 Q600,480 680,480" />
                 </circle>
                 <circle r="3" class="circuit-pulse pulse-3">
-                    <animateMotion dur="3.5s" repeatCount="indefinite" path="M320,80 Q420,80 420,200 Q420,200 520,200"/>
+                    <animateMotion dur="3.5s" repeatCount="indefinite"
+                        path="M320,80 Q420,80 420,200 Q420,200 520,200" />
                 </circle>
                 <circle r="3" class="circuit-pulse pulse-4">
-                    <animateMotion dur="4.5s" repeatCount="indefinite" path="M120,350 Q220,350 220,480 Q220,480 320,480"/>
+                    <animateMotion dur="4.5s" repeatCount="indefinite"
+                        path="M120,350 Q220,350 220,480 Q220,480 320,480" />
                 </circle>
             </svg>
         </div>
@@ -530,7 +603,8 @@
             <div class="concept-content">
                 <div class="concept-text">
                     <h2>De la Tienda Física a la Asesoría Digital</h2>
-                    <p class="concept-subtitle">Transformamos la manera de proteger tu negocio con tecnología y asesoría experta</p>
+                    <p class="concept-subtitle">Transformamos la manera de proteger tu negocio con tecnología y asesoría
+                        experta</p>
                 </div>
                 <div class="concept-visual">
                     <div class="feature-item">
@@ -625,38 +699,45 @@
                 <div class="audience-card">
                     <div class="card-visual">
                         <div class="card-icon-wrap">
-                            <svg width="40" height="40"><use href="#icon-corporate"/></svg>
+                            <svg width="40" height="40">
+                                <use href="#icon-home" />
+                            </svg>
                         </div>
                     </div>
-                    <h3>Empresas Corporativas</h3>
-                    <p>Oficinas, centros de negocios, centros comerciales y sedes corporativas que requieren seguridad integral y discreta.</p>
+                    <!--<h3>Patrimonio</h3>-->
+                    <p>Hogares, residenciales, departamentos y condominios familiares con protección personalizada.</p>
                     <div class="card-examples">
-                        <span>Bancos</span>
-                        <span>Consultoras</span>
-                        <span>Tecnológicas</span>
+                        <span>Residenciales</span>
+                        <span>Condominios</span>
+                        <span>Fraccionamientos</span>
                     </div>
                 </div>
                 <div class="audience-card">
                     <div class="card-visual">
                         <div class="card-icon-wrap">
-                            <svg width="40" height="40"><use href="#icon-factory"/></svg>
+                            <svg width="40" height="40">
+                                <use href="#icon-university" />
+                            </svg>
                         </div>
                     </div>
-                    <h3>Sector Industrial</h3>
-                    <p>Plantas industriales, almacenes y centros de distribución con necesidades específicas de seguridad.</p>
+                    <!--<h3>Instituciones</h3>-->
+                    <p>Universidades, hospitales y organismos gubernamentales que protegen comunidades.</p>
                     <div class="card-examples">
-                        <span>Manufactura</span>
-                        <span>Logística</span>
-                        <span>Energía</span>
+                        <span>Educación</span>
+                        <span>Salud</span>
+                        <span>Gobierno</span>
                     </div>
                 </div>
+                
                 <div class="audience-card">
                     <div class="card-visual">
                         <div class="card-icon-wrap">
-                            <svg width="40" height="40"><use href="#icon-store"/></svg>
+                            <svg width="40" height="40">
+                                <use href="#icon-store" />
+                            </svg>
                         </div>
                     </div>
-                    <h3>Comercio y Retail</h3>
+                    <!--<h3>Comercio y Retail</h3>-->
                     <p>Comercios, cadenas de retail y espacios comerciales de alto tráfico.</p>
                     <div class="card-examples">
                         <span>Retail</span>
@@ -667,29 +748,36 @@
                 <div class="audience-card">
                     <div class="card-visual">
                         <div class="card-icon-wrap">
-                            <svg width="40" height="40"><use href="#icon-university"/></svg>
+                            <svg width="40" height="40">
+                                <use href="#icon-corporate" />
+                            </svg>
                         </div>
                     </div>
-                    <h3>Instituciones</h3>
-                    <p>Universidades, hospitales y organismos gubernamentales que protegen comunidades.</p>
+                    <!--<h3>Empresas Corporativas</h3>-->
+                    <p>Oficinas, centros de negocios, centros comerciales y sedes corporativas que requieren seguridad
+                        integral y discreta.</p>
                     <div class="card-examples">
-                        <span>Educación</span>
-                        <span>Salud</span>
-                        <span>Gobierno</span>
+                        <span>Bancos</span>
+                        <span>Consultoras</span>
+                        <span>Tecnológicas</span>
                     </div>
                 </div>
+                
                 <div class="audience-card">
                     <div class="card-visual">
                         <div class="card-icon-wrap">
-                            <svg width="40" height="40"><use href="#icon-home"/></svg>
+                            <svg width="40" height="40">
+                                <use href="#icon-factory" />
+                            </svg>
                         </div>
                     </div>
-                    <h3>Patrimonio</h3>
-                    <p>Hogares, residenciales, departamentos y condominios familiares con protección personalizada.</p>
+                    <!--<h3>Sector Industrial</h3>-->
+                    <p>Plantas industriales, almacenes y centros de distribución con necesidades específicas de
+                        seguridad.</p>
                     <div class="card-examples">
-                        <span>Residenciales</span>
-                        <span>Condominios</span>
-                        <span>Fraccionamientos</span>
+                        <span>Manufactura</span>
+                        <span>Logística</span>
+                        <span>Energía</span>
                     </div>
                 </div>
             </div>
@@ -728,17 +816,14 @@
                             <input type="text" placeholder="Nombre completo" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email corporativo" required>
+                            <input type="email" placeholder="Email" required>
                         </div>
                         <div class="form-group">
                             <input type="tel" placeholder="Teléfono" required>
                         </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Empresa" required>
-                        </div>
                         <div class="form-group select-wrap">
                             <select required>
-                                <option value="">Tipo de empresa</option>
+                                <option value="">Tipo dr Negocio</option>
                                 <option value="corporativa">Corporativa</option>
                                 <option value="industrial">Industrial</option>
                                 <option value="comercial">Comercial</option>
@@ -762,7 +847,7 @@
             <div class="footer-orb orb-2"></div>
             <div class="footer-orb orb-3"></div>
         </div>
-        
+
         <div class="container">
             <div class="footer-content">
                 <!--<div class="footer-brand">
@@ -776,16 +861,18 @@
                     <p>Seguridad corporativa integral para excelencia.</p>
                 </div>-->
                 <div class="footer-links">
-                    <div class="link-column">
+                    <!--<div class="link-column">
                         <div class="footer-logo">
-                                <picture>
-                                    <source media="(max-width: 576px)" srcset="assets/img/logo/3_Logo_ALSEG_Horizontal_Blanco.png">
-                                    <img src="assets/img/logo/3_Logo_ALSEG_Horizontal_Blanco.png" alt="Grupo Alseg" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%2718%27 fill=%27%23141873%27/%3E%3Cpath d=%27M20 8l8 6v12l-8 6-8-6V14l8-6z%27 fill=%27white%27/%3E%3C/svg%3E'">
-                                </picture>
-                                <!-- El texto se elimina porque viene incluido en el logo blanco -->
-                    </div>
-                    <p>Seguridad corporativa integral para excelencia.</p>
-                    </div>
+                            <picture>
+                                <source media="(max-width: 576px)"
+                                    srcset="assets/img/logo/3_Logo_ALSEG_Horizontal_Blanco.png">
+                                <img src="assets/img/logo/3_Logo_ALSEG_Horizontal_Blanco.png" alt="Grupo Alseg"
+                                    onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%2718%27 fill=%27%23141873%27/%3E%3Cpath d=%27M20 8l8 6v12l-8 6-8-6V14l8-6z%27 fill=%27white%27/%3E%3C/svg%3E'">
+                            </picture>
+                        El texto se elimina porque viene incluido en el logo blanco
+                        </div>
+                        <p>Seguridad corporativa integral para excelencia.</p>
+                    </div>-->
                     <div class="link-column">
                         <h4>Servicios</h4>
                         <a href="#">Implementación</a>
@@ -803,21 +890,28 @@
                     </div>
                     <div class="link-column">
                         <h4>Contacto</h4>
-                        <a href="mailto:alsegcuautla@gmail.com"><i class="fa-solid fa-envelope footer-icon" aria-hidden="true"></i> alsegcuautla@gmail.com</a>
-                        <a href="tel:+527352803033"><i class="fa-solid fa-phone footer-icon" aria-hidden="true"></i> 735 280 3033</a>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Sweet+Buffet,+Cuautlixco,+62747+Cuautla,+Mor." target="_blank" rel="noopener"><i class="fa-solid fa-location-dot footer-icon" aria-hidden="true"></i> Sweet Buffet, Cuautlixco, 62747 Cuautla, Mor.</a>
-                        <a href="https://www.facebook.com/GPOALSEG" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f footer-icon" aria-hidden="true"></i> Facebook</a>
+                        <a href="mailto:alsegcuautla@gmail.com"><i class="fa-solid fa-envelope footer-icon"
+                                aria-hidden="true"></i> alsegcuautla@gmail.com</a>
+                        <a href="tel:+527352803033"><i class="fa-solid fa-phone footer-icon" aria-hidden="true"></i> 735
+                            280 3033</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Sweet+Buffet,+Cuautlixco,+62747+Cuautla,+Mor."
+                            target="_blank" rel="noopener"><i class="fa-solid fa-location-dot footer-icon"
+                                aria-hidden="true"></i> Sweet Buffet, Cuautlixco, 62747 Cuautla, Mor.</a>
+                        <a href="https://www.facebook.com/GPOALSEG" target="_blank" rel="noopener"><i
+                                class="fa-brands fa-facebook-f footer-icon" aria-hidden="true"></i> Facebook</a>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Mapa embebido full-width -->
             <div class="footer-map-container">
                 <div class="footer-map">
-                    <iframe src="https://www.google.com/maps?q=Sweet+Buffet,+Cuautlixco,+62747+Cuautla,+Mor.&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps?q=Sweet+Buffet,+Cuautlixco,+62747+Cuautla,+Mor.&output=embed"
+                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Grupo Alseg. Todos los derechos reservados.</p>
                 <div class="footer-legal">
@@ -829,7 +923,7 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
-    
+
     <!-- Botones flotantes de contacto -->
     <div class="floating-contacts">
         <!-- Botón de teléfono -->
@@ -837,28 +931,33 @@
             <i class="fa-solid fa-phone"></i>
             <span class="contact-text">Llamar</span>
         </a>
-        
+
         <!-- Botón WhatsApp -->
-        <a href="https://wa.me/527352803033" target="_blank" rel="noopener" class="wa-btn" aria-label="Abrir chat de WhatsApp">
-          <div class="wa-sign">
-            <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16" aria-hidden="true">
-              <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-            </svg>
-          </div>
-          <div class="wa-text">WhatsApp</div>
+        <a href="https://wa.me/527352803033" target="_blank" rel="noopener" class="wa-btn"
+            aria-label="Abrir chat de WhatsApp">
+            <div class="wa-sign">
+                <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16" aria-hidden="true">
+                    <path
+                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
+                    </path>
+                </svg>
+            </div>
+            <div class="wa-text">WhatsApp</div>
         </a>
-        
+
         <!-- Botón Instagram -->
         <a href="#" target="_blank" rel="noopener" class="instagram-btn" aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
             <span class="contact-text">Instagram</span>
         </a>
-        
+
         <!-- Botón Facebook -->
-        <a href="https://www.facebook.com/GPOALSEG" target="_blank" rel="noopener" class="facebook-btn" aria-label="Facebook">
+        <a href="https://www.facebook.com/GPOALSEG" target="_blank" rel="noopener" class="facebook-btn"
+            aria-label="Facebook">
             <i class="fa-brands fa-facebook-f"></i>
             <span class="contact-text">Facebook</span>
         </a>
     </div>
 </body>
+
 </html>
