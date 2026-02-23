@@ -390,11 +390,8 @@
                 <div class="cycle-center">
                     <div class="center-glow"></div>
                     <div class="center-circle">
-                        <div class="center-icon" aria-hidden="true">
-                            <img class="icon" src="assets/img/svg/Integración.svg" alt="Integración" />
-                        </div>
-                        <h3>Asesoría<br>Estratégica</h3>
-                        <p>Mejora Continua</p>
+                        <h3>Seguridad<br>360°</h3>
+                        <p>Ecosistema Integral</p>
                     </div>
                 </div>
 
@@ -402,19 +399,17 @@
                 <div class="cycle-element element-left">
                     <div class="element-card">
                         <div class="card-step-num">01</div>
-                        <div class="element-icon">
-                            <svg class="icon" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                                <use href="#icon-wrench"></use>
-                            </svg>
+                        <div class="element-icon implementacion-icon">
+                            <img class="icon" src="assets/img/svg/implementación.svg" alt="Implementación" loading="lazy" />
                         </div>
                         <h4>Implementación</h4>
                         <p>Sistemas integrados de seguridad</p>
                         <div class="element-tags">
                             <span>Análisis completo</span>
                             <span>Diseño personalizado</span>
-                            <span>Instalación profesional</span>
                             <span>Integración total</span>
                         </div>
+                        <a href="#contacto" class="cycle-btn">Ver más</a>
                     </div>
                 </div>
 
@@ -432,9 +427,9 @@
                         <div class="element-tags">
                             <span>Centro de control</span>
                             <span>Alertas inteligentes</span>
-                            <span>Respuesta inmediata</span>
-                            <span>Reportes detallados</span>
+                            <span>Respuestas inmediatas</span>
                         </div>
+                        <a href="#contacto" class="cycle-btn">Ver más</a>
                     </div>
                 </div>
 
@@ -450,31 +445,31 @@
                         <div class="element-tags">
                             <span>Evaluación de riesgos</span>
                             <span>Análisis predictivo</span>
-                            <span>Optimización continua</span>
                             <span>Consultoría estratégica</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Órbita circular que conecta las cards -->
-                <div class="cycle-orbit" aria-hidden="true"></div>
-
-                <!-- Órbita circular SVG que conecta las 3 cards -->
-                <svg class="cycle-connections" viewBox="0 0 950 700" preserveAspectRatio="xMidYMid meet"
-                    aria-hidden="true">
-                    <!-- Gran elipse de órbita -->
-                    <ellipse cx="475" cy="340" rx="340" ry="280" class="orbit-path" />
-                    <!-- Flechitas/puntos decorativos en la órbita -->
-                    <circle cx="135" cy="310" r="4" fill="rgba(24,34,89,0.18)" />
-                    <circle cx="475" cy="620" r="4" fill="rgba(24,34,89,0.18)" />
-                    <circle cx="815" cy="310" r="4" fill="rgba(24,34,89,0.18)" />
-                </svg>
+                <!-- Flechas amarillas: ciclo Card 01 → Card 02 → Card 03 → Card 01
+                <svg class="cycle-arrows" viewBox="0 0 950 700" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="20" markerHeight="20" refX="18" refY="10" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L20,10 L0,20 Z" fill="#FFC300" />
+                        </marker>
+                    </defs>
+                    1. Flecha superior (curva grande por arriba, estilo naranja) 
+                    <path d="M260,220 C360,80 620,80 740,220" fill="none" stroke="#FFC300" stroke-width="4.5" stroke-linecap="round" marker-end="url(#arrowhead)" />
+                    2. Flecha derecha (curva descendente hacia la tarjeta inferior) 
+                    <path d="M740,260 C820,360 700,480 560,520" fill="none" stroke="#FFC300" stroke-width="4.5" stroke-linecap="round" marker-end="url(#arrowhead)" />
+                    3. Flecha inferior-izquierda (curva de retorno a la tarjeta izquierda) 
+                    <path d="M520,520 C420,600 280,560 220,420" fill="none" stroke="#FFC300" stroke-width="4.5" stroke-linecap="round" marker-end="url(#arrowhead)" />
+                </svg> -->
             </div>
         </div>
     </section>
 
     <!-- Seccion Soluciones -->
-    <section class="problem">
+    <section class="problem" id="soluciones">
         <!-- Burbujas decorativas -->
         <div class="problem-bubbles" aria-hidden="true">
             <div class="p-bubble pb-1"></div>
@@ -491,19 +486,18 @@
             <div class="section-header">
                 <h2 class="section-title">Soluciones</h2>
                 <p class="section-subtitle">
-                    Resolvemos las fallas comunes dentro del mercado 
+                    Resolvemos las fallas comunes dentro del mercado
                 </p>
+                <span class="section-line" aria-hidden="true"></span>
             </div>
             <div class="problem-grid">
                 <div class="problem-card">
-                    <div class="card-icon" aria-hidden="true">
-                        <svg class="icon" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                            <use href="#icon-link-broken"></use>
-                        </svg>
+                    <div class="card-icon integracion-icon" aria-hidden="true">
+                        <img class="icon" src="assets/img/svg/Integración.svg" alt="Integración" loading="lazy" />
                     </div>
                     <h3>Falta de Integración</h3>
                     <p>Sistemas aislados que no se comunican entre sí, creando puntos ciegos en la seguridad.</p>
-                    <div class="card-tag">Problema común #1</div>
+                    <a href="#contacto" class="card-btn">Problema común #1</a>
                 </div>
                 <div class="problem-card">
                     <div class="card-icon" aria-hidden="true">
@@ -513,17 +507,15 @@
                     </div>
                     <h3>Monitoreo Insuficiente</h3>
                     <p>Equipos sin supervisión real que solo graban pero no previenen ni alertan.</p>
-                    <div class="card-tag">Problema común #2</div>
+                    <a href="#contacto" class="card-btn">Problema común #2</a>
                 </div>
                 <div class="problem-card">
-                    <div class="card-icon" aria-hidden="true">
-                        <svg class="icon" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                            <use href="#icon-strategy"></use>
-                        </svg>
+                    <div class="card-icon asesoria-icon" aria-hidden="true">
+                        <img class="icon" src="assets/img/svg/Asesoria.svg" alt="Asesoría" loading="lazy" />
                     </div>
                     <h3>Falta de Asesoría Estratégica</h3>
                     <p>Inversiones en seguridad sin análisis de riesgos reales ni planificación a futuro.</p>
-                    <div class="card-tag">Problema común #3</div>
+                    <a href="#contacto" class="card-btn">Problema común #3</a>
                 </div>
             </div>
         </div>
@@ -715,7 +707,7 @@
                             </svg>
                         </div>
                     </div>
-                    <p>Comercios, cadenas de retail y espacios comerciales de alto tráfico.</p>
+                    <p>Comercios, Familiares, Microempresas, tiendas de retail, restaurantes y más.</p>
                     <div class="card-examples">
                         <span>Retail</span>
                         <span>Centros Comerciales</span>
@@ -771,7 +763,7 @@
         <div class="container">
             <div class="cta-content">
                 <div class="cta-text">
-                    <h2>¿Listo para Transformar tu Seguridad?</h2>
+                    <h2>Protege lo que más importa, con un sistema integral.</h2>
                     <p>
                         No vendemos productos. Diseñamos soluciones.
                     </p>
@@ -799,7 +791,7 @@
                         </div>
                         <div class="form-group select-wrap">
                             <select required>
-                                <option value="">Tipo dr Negocio</option>
+                                <option value="">Tipo de propiedad o instalación</option>
                                 <option value="corporativa">Corporativa</option>
                                 <option value="industrial">Industrial</option>
                                 <option value="comercial">Comercial</option>
@@ -807,7 +799,7 @@
                             </select>
                         </div>
                         <button type="submit" class="btn-primary full-width">
-                            Agendar Asesoría Gratuita
+                            Agendar Asesoría
                         </button>
                     </form>
                 </div>
