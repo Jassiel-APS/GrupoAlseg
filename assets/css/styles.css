@@ -2567,18 +2567,9 @@ section {
 
 /* Target Audience — Sectores que Protegemos */
 .target-audience {
-    /* Fondo más suave, menos saturado (amarillo pálido) */
-    background: linear-gradient(135deg, #FFF9EA 0%, #FFF7DB 30%, #FFF8E6 60%, #FFF9EE 100%);
-    background-size: 200% 200%;
-    animation: audienceGradient 24s ease infinite;
+    background-color: #fac73c;
     position: relative;
     overflow: hidden;
-}
-
-@keyframes audienceGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 /* Burbujas decorativas para la sección */
