@@ -536,7 +536,7 @@ svg.whatsappSvg {
     /* Compensar navbar fija */
     padding-top: var(--nav-height);
     /* Imagen de fondo de madera */
-    background-image: url('../img/fondo-madera.png');
+    background-image: url('../img/MaderaFondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2567,18 +2567,17 @@ section {
 
 /* Target Audience — Sectores que Protegemos */
 .target-audience {
-    background: linear-gradient(135deg, #FFC300 0%, #FFD700 20%, #FFAB00 40%, #FFC300 60%, #FFE066 80%, #FFC300 100%);
-    background-size: 400% 400%;
-    animation: audienceGradient 18s ease infinite;
+    /* Fondo más suave, menos saturado (amarillo pálido) */
+    background: linear-gradient(135deg, #FFF9EA 0%, #FFF7DB 30%, #FFF8E6 60%, #FFF9EE 100%);
+    background-size: 200% 200%;
+    animation: audienceGradient 24s ease infinite;
     position: relative;
     overflow: hidden;
 }
 
 @keyframes audienceGradient {
     0% { background-position: 0% 50%; }
-    25% { background-position: 50% 0%; }
     50% { background-position: 100% 50%; }
-    75% { background-position: 50% 100%; }
     100% { background-position: 0% 50%; }
 }
 
