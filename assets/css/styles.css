@@ -591,11 +591,24 @@ svg.whatsappSvg {
 }
 
 .hero-title .highlight {
-    background: linear-gradient(135deg, #FF7A00, #FFB07A);
+    /* Degradado azulado en el texto */
+    background: linear-gradient(90deg, #0d6efd 0%, #4ea1ff 50%, #8cc7ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: drop-shadow(0 2px 6px rgba(255, 122, 0, 0.40));
+    filter: drop-shadow(0 2px 8px rgba(13,110,253,0.18));
+}
+
+/* Animación sutil para el título principal */
+.title-animate {
+    display: inline-block;
+    animation: titlePulse 3s ease-in-out infinite;
+}
+
+@keyframes titlePulse {
+    0% { transform: translateY(0) scale(1); text-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+    50% { transform: translateY(-6px) scale(1.02); text-shadow: 0 6px 18px rgba(0,0,0,0.20); }
+    100% { transform: translateY(0) scale(1); text-shadow: 0 2px 6px rgba(0,0,0,0.15); }
 }
 
 .hero-subtitle {
@@ -2567,7 +2580,7 @@ section {
 
 /* Target Audience — Sectores que Protegemos */
 .target-audience {
-    background-color: #fac73c;
+    background-color: #ffd86e;
     position: relative;
     overflow: hidden;
 }
@@ -3417,6 +3430,14 @@ section {
 
 .link-column a:hover .footer-icon {
     transform: scale(1.15) rotate(5deg);
+}
+
+/* Excepción: mostrar el icono de Google Maps tal cual (sin invertir/escala de grises) */
+.footer-icon.maps-icon {
+    filter: none !important;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 /* Si el icono es una imagen (PNG), forzar conversión a blanco manteniendo transparencia */
