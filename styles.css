@@ -1295,6 +1295,10 @@ section {
 .final-cta {
     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-navy) 100%);
     color: var(--white);
+    position: relative;
+    z-index: 10;
+    overflow: visible;
+    padding-bottom: 120px;
 }
 
 .cta-content {
@@ -1347,6 +1351,11 @@ section {
     padding: 40px;
     border-radius: var(--border-radius);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: visible;
+}
+
+.cta-form {
+    overflow: visible;
 }
 
 .form-group {
@@ -1783,10 +1792,14 @@ section {
 
 /* Dark variant for contact-form */
 .contact-form .custom-select .cs-selected { background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)); color: var(--white); border: 1px solid rgba(255,255,255,0.08); box-shadow: none; }
-.contact-form .custom-select .cs-options { background: rgba(255,255,255,0.04); }
-.contact-form .custom-select .cs-options li { color: var(--white); }
+.contact-form .custom-select .cs-options {
+    background: linear-gradient(180deg, #1a2266 0%, #141873 100%);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+}
+.contact-form .custom-select .cs-options li { color: rgba(255,255,255,0.9); }
 .contact-form .custom-select .cs-options li:hover,
-.contact-form .custom-select .cs-options li.active { background: rgba(255,255,255,0.08); color: var(--white); }
+.contact-form .custom-select .cs-options li.active { background: var(--accent-blue); color: #fff; }
 
 /* Evitar que el FAB de WhatsApp se solape con el footer en pantallas pequeñas */
 @media (max-width: 768px) {
